@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Campus Announcements</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="bg">
+    <nav>
+      <label class="logo">Campus Event Organizer</label>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a class="active" href="announcements.html">Announcements</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="container">
+    <div class="form-container">
+      <h2>POST AN ANNOUNCEMENT</h2>
+      <form id="announcementForm" action="submit_announcement.php" method="post">
+        <table>
+          <tr>
+            <td><label for="announcement_title">Announcement Title:</label></td>
+            <td><input type="text" id="announcement_title" name="announcement_title" required></td>
+          </tr>
+          <tr>
+            <td><label for="announcement_date">Date:</label></td>
+            <td><input type="date" id="announcement_date" name="announcement_date" required></td>
+          </tr>
+          <tr>
+            <td><label for="announcement_content">Content:</label></td>
+            <td><textarea id="announcement_content" name="announcement_content" rows="4" required></textarea></td>
+          </tr>
+        </table>
+        <br>
+        <button type="button" onclick="submitAnnouncementForm()">Submit Announcement</button>
+      </form>
+    </div>
+
+    <h1>RECENT ANNOUNCEMENTS</h1>
+
+    <div class="announcement">
+      <h2>Upcoming Winter Break Schedule</h2>
+      <p class="date">Date: November 25, 2024</p>
+      <p>Attention students and faculty: The winter break will commence on December 20, 2024, and end on January 5, 2025. Please plan accordingly and ensure all assignments are submitted before the break.</p>
+    </div>
+
+    <div class="announcement">
+      <h2>New Online Library Resources Available</h2>
+      <p class="date">Date: December 1, 2024</p>
+      <p>We are excited to announce that several new online resources have been added to our library database. These include new journals, e-books, and academic papers. Access these resources through the library portal.</p>
+    </div>
+
+    <div class="announcement">
+      <h2>Holiday Campus Closure</h2>
+      <p class="date">Date: December 15, 2024</p>
+      <p>Please be advised that the campus will be closed for the holidays from December 22, 2024, to January 2, 2025. Essential services will be available online during this period.</p>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    <p>&copy; Campus Event Organizer, 2024</p>
+  </div>
+
+  <script>
+    function submitAnnouncementForm() {
+      alert("Announcement submitted successfully!");
+      document.getElementById("announcementForm").reset();
+    }
+  </script>
+
+</body>
+
+</html>

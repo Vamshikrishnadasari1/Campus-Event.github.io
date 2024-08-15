@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Feedback</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="bg">
+    <nav>
+      <label class="logo">CAMPUS EVENT SCHEDULER</label>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="announcements.html">Announcements</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a class="active" href="feedback.html">Feedback</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="container">
+    <h1>USER FEEDBACK</h1>
+
+    <div class="feedback">
+      <div class="feedback-item">
+        <h2>Alice Williams</h2>
+        <p>The recent career fair was exceptionally well-organized. The variety of companies and opportunities was impressive. Great job!</p>
+      </div>
+      <div class="feedback-item">
+        <h2>Michael Thompson</h2>
+        <p>I found the online resources extremely useful, especially the library guide. It made my exam preparations much easier.</p>
+      </div>
+      <div class="feedback-item">
+        <h2>Sophia Lee</h2>
+        <p>The workshops on mental health were insightful and much needed. I appreciate the school's efforts in addressing student well-being.</p>
+      </div>
+      <div class="feedback-item">
+        <h2>David Martinez</h2>
+        <p>The event scheduling system is very user-friendly. It helped me stay on top of all the important dates and activities.</p>
+      </div>
+    </div>
+
+    <h2>Submit Your Feedback</h2>
+    <div class="form-container">
+      <form id="feedbackForm">
+        <table>
+          <tr>
+            <td><label for="name">Your Name:</label></td>
+            <td><input type="text" id="name" name="name" required></td>
+          </tr>
+          <tr>
+            <td><label for="feedback">Your Feedback:</label></td>
+            <td><textarea id="feedback" name="feedback" rows="4" required></textarea></td>
+          </tr>
+        </table>
+        <br>
+        <button type="button" onclick="submitFeedback()">Submit Feedback</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>&copy; Campus Event Scheduler, 2024</p>
+  </div>
+
+  <script>
+    function submitFeedback() {
+      // Get the name and feedback from the form
+      const name = document.getElementById("name").value;
+      const feedback = document.getElementById("feedback").value;
+
+      // Check if the name and feedback are not empty
+      if (name && feedback) {
+        // Display an alert confirming submission
+        alert("Thank you, " + name + "! Your feedback has been submitted successfully!");
+
+        // Reset the form
+        document.getElementById("feedbackForm").reset();
+      } else {
+        // Alert the user to fill in the form
+        alert("Please fill in both your name and feedback.");
+      }
+    }
+  </script>
+
+</body>
+
+</html>

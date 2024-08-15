@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Campus Resources</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="bg">
+    <nav>
+      <label class="logo">Campus Event Organizer</label>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="announcements.html">Announcements</a></li>
+        <li><a class="active" href="resources.html">Resources</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="container">
+    <div class="form-container">
+      <h2>UPLOAD NEW RESOURCE</h2>
+      <form id="resourceForm" action="submit_resource.php" method="post">
+        <table>
+          <tr>
+            <td><label for="resource_name">Resource Name:</label></td>
+            <td><input type="text" id="resource_name" name="resource_name" required></td>
+          </tr>
+          <tr>
+            <td><label for="resource_description">Resource Description:</label></td>
+            <td><textarea id="resource_description" name="resource_description" rows="4" required></textarea></td>
+          </tr>
+          <tr>
+            <td><label for="resource_link">Resource Link:</label></td>
+            <td><input type="url" id="resource_link" name="resource_link" required></td>
+          </tr>
+        </table>
+        <br>
+        <button type="button" onclick="submitResourceForm()">Submit Resource</button>
+      </form>
+    </div>
+
+    <h1>FEATURED RESOURCES</h1>
+
+    <div class="resource">
+      <h2>Rivier University Library Guide</h2>
+      <p>This guide offers comprehensive resources for academic research, citation guides, and access to digital libraries available to Rivier University students.</p>
+      <a href="https://www.rivier.edu/academics/library/" class="download-link" target="_blank">Visit Rivier University Library</a>
+    </div>
+
+    <div class="resource">
+      <h2>APA Citation Guide</h2>
+      <p>A guide to APA citation format for writing research papers and assignments. It includes examples and best practices.</p>
+      <a href="https://libguides.rivier.edu/APA" class="download-link" target="_blank">Visit APA Citation Guide</a>
+    </div>
+
+    <div class="resource">
+      <h2>Research Databases</h2>
+      <p>Access a variety of research databases available through Rivier University Library for your academic work.</p>
+      <a href="https://www.rivier.edu/academics/library/research-databases/" class="download-link" target="_blank">Access Research Databases</a>
+    </div>
+
+    <div class="resource">
+      <h2>Career Development Guide</h2>
+      <p>Explore Rivier’s Career Development Center resources, including resume writing tips, interview strategies, and job search assistance.</p>
+      <a href="https://www.rivier.edu/student-life/career-development-center/" class="download-link" target="_blank">Visit Career Development Center</a>
+    </div>
+
+    <div class="resource">
+      <h2>Student Handbook 2024</h2>
+      <p>Get the latest edition of the Rivier University Student Handbook, featuring updated information on school policies, procedures, and important contacts.</p>
+      <a href="https://www.rivier.edu/student-life/student-handbook/" class="download-link" target="_blank">Download Student Handbook</a>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    <p>&copy; Campus Event Organizer, 2024</p>
+  </div>
+
+  <script>
+    function submitResourceForm() {
+      alert("Resource submitted successfully!");
+      document.getElementById("resourceForm").reset();
+    }
+  </script>
+
+</body>
+
+</html>
